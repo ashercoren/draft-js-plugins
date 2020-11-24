@@ -153,7 +153,7 @@ export default class EmojiSuggestions extends Component<
             plainText.charAt(anchorOffset) !== ':' &&
             /(\s|^):[\w]*/.test(plainText) &&
             anchorOffset <= end) || // : is the first character
-          (anchorOffset > start + 1 &&
+          (anchorOffset >= start + 1 &&
             anchorOffset <= end) /*: is in the text or at the end*/
       );
     if (selectionIsInsideWord.every((isInside) => isInside === false))
